@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    overflow: hidden;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    height: 85%;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.main-section {
+    flex: 0 0 55%;
+    margin-right: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.transcription-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.record-icon {
+    font-size: 48px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.record-icon.recording {
+    color: red;
+    transform: scale(1.2);
+}
+
+.transcription-button {
+    background: #fff;
+    color: #6a11cb;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+}
+
+.transcription-button:hover {
+    background: #6a11cb;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.transcription-content {
+    width: 100%;
+    height: calc(100% - 80px);
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: auto;
+    font-size: 16px;
+    line-height: 1.5;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+.side-section {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user-notes, .ai-notes {
+    flex: 0 0 42%;
+    margin-bottom: 3px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.user-notes h2, .ai-notes h2 {
+    margin: 0 0 10px 0;
+}
+
+.user-notes textarea {
+    width: 100%;
+    height: calc(100% - 40px);
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    flex-grow: 1;
+}
+
+.ai-notes .content {
+    width: 100%;
+    height: calc(100% - 40px);
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+footer {
+    position: absolute;
+    bottom: -5px;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+}
+
+#timer {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .transcription-button {
+    background-color: #6a11cb;
+    color: white;
+}
+
+#resetButton {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+}
+
+#resetButton:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}

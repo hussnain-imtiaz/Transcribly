@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Transcription</title>
+    <link rel="stylesheet" href="../static/css/transcription.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-section">
+            <h2>🎤 Live Transcription</h2>
+            <div class="transcription-controls">
+                <div class="record-icon" id="recordIcon">🎙️</div>
+                <select id="languageDropdown" class="transcription-button">
+                    <option value="en-US">English (US)</option>
+                    <option value="en-GB">English (UK)</option>
+                    <option value="en-AU">English (Australia)</option>
+                    <option value="es-ES">Spanish (Spain)</option>
+                    <option value="fr-FR">French (France)</option>
+                    <option value="de-DE">German (Germany)</option>
+                    <option value="zh-CN">Chinese (Mandarin)</option>
+                    <option value="ja-JP">Japanese</option>
+                    <option value="ur">Urdu</option>
+                    <option value="ar">Arabic</option>
+                </select>
+                <button class="transcription-button" id="startButton">Start Transcription</button>
+                <button class="transcription-button" id="pauseButton" style="display: none;">Pause</button>
+                <button class="transcription-button" id="resumeButton" style="display: none;">Resume</button>
+                <button class="transcription-button" id="stopButton" style="display: none;">Stop</button>
+                <button class="transcription-button" id="resetButton" style="display: none;">Reset</button>
+                <div class="dropdown" id="saveDropdown" style="display: none;">
+                    <button class="transcription-button" id="saveButton">Save</button>
+                    <div class="dropdown-content">
+                        <a href="#" id="exportPdfButton">Export as PDF</a>
+                        <a href="#" id="exportDocxButton">Export as DOCX</a>
+                    </div>
+                </div>
+                <div id="timer">00:00:00</div>
+            </div>
+
+            <div class="editor-toolbar">
+                <button class="editor-button" id="boldButton"><b>B</b></button>
+                <button class="editor-button" id="italicButton"><i>I</i></button>
+                <button class="editor-button" id="underlineButton"><u>U</u></button>
+                <button class="editor-button" id="highlightButton">🔶 Highlight</button>
+                <button class="editor-button" id="importantButton">⭐ Mark Important</button>
+                <button class="editor-button" id="clearFormatButton">❌ Clear Format</button>
+            </div>
+
+            <div class="editor-toolbar">
+                <label for="translateDropdown">Translate to:</label>
+                <select id="translateDropdown" class="transcription-button">
+                    <option value="" selected disabled>Choose language</option>
+                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                    <option value="de">German</option>
+                    <option value="zh-CN">Chinese</option>
+                    <option value="ja">Japanese</option>
+                    <option value="ur">Urdu</option>
+                    <option value="ar">Arabic</option>
+                    <!-- Add more languages as needed -->
+                </select>
+            </div>
+
+            <div class="transcription-content" id="liveTranscription" contenteditable="true">
+                <!-- Live transcription content will go here -->
+            </div>
+        </div>
+        <div class="side-section">
+            <div class="user-notes">
+                <h2>✏️ User Notes</h2>
+                <textarea id="userNotes" placeholder="Type your notes here..."></textarea>
+            </div>
+            <div class="ai-notes">
+                <h2>🤖 AI Key Points</h2>
+                <div class="content" id="aiNotes">
+                    <!-- AI notes content will go here -->
+                </div>
+                <button class="transcription-button" id="summarizeButton" disabled>Extract Key Points</button>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Hussnain Imtiaz. All rights reserved. 📚</p>
+    </footer>
+    <script src="../static/js/transcription.js"></script>
+</body>
+</html>
