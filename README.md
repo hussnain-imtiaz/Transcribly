@@ -22,7 +22,7 @@ This project is an AI-powered application that provides real-time transcription 
 
     ```bash
     git clone https://github.com/hussnain-imtiaz/Transcribly
-    cd ai-live-transcription
+    cd Transcribly
     ```
 
 2. **Install Python dependencies**:
@@ -46,19 +46,19 @@ This project is an AI-powered application that provides real-time transcription 
 
     ```bash
     git clone https://github.com/hussnain-imtiaz/Transcribly
-    cd ai-live-transcription
+    cd Transcribly
     ```
 
 2. **Build the Docker image**:
 
     ```bash
-    docker build -t ai-live-transcription .
+    docker build -t Transcribly .
     ```
 
 3. **Run the Docker container**:
 
     ```bash
-    docker run -p 3000:3000 -p 5000:5000 ai-live-transcription
+    docker run -p 3000:3000 -p 5000:5000 Transcribly
     ```
 
 4. **Visit the application**:
