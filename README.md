@@ -31,28 +31,14 @@ This project is an AI-powered application that provides real-time transcription 
     pip install -r requirements.txt
     ```
 
-3. **Install JavaScript dependencies**:
-
-    ```bash
-    cd frontend
-    npm install
-    ```
-
-4. **Run the Flask server**:
+3. **Run the Flask server**:
 
     ```bash
     python app.py
     ```
 
-5. **Run the React development server**:
-
-    ```bash
-    cd frontend
-    npm start
-    ```
-
-6. **Visit the application**:
-   Open your browser and navigate to `http://localhost:3000`.
+4. **Visit the application**:
+   Open your browser and navigate to `http://localhost:5000`.
 
 ### Running via Docker
 
@@ -91,7 +77,6 @@ This project is an AI-powered application that provides real-time transcription 
 ## Requirements
 
 - **Python 3.7+**
-- **Node.js 14+**
 - **FFmpeg**: Required for processing audio files.
 
 ## Installation
