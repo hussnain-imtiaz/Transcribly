@@ -5,6 +5,8 @@ This project is an AI-powered application that provides real-time transcription 
 
 ![alt sample](media/ui1.png)
 
+[Video Demo](https://www.youtube.com/watch?v=yK0JJzxH7iQ)
+
 ## Features
 
 - **Real-Time Transcription**: Automatically transcribe speech to text in real-time with continuous updates.
