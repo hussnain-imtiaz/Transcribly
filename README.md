@@ -3,6 +3,8 @@
 
 This project is an AI-powered application that provides real-time transcription and note-taking capabilities. The assistant is designed to help students, educators, and professionals capture spoken content accurately, generate summaries, and improve retention of information during lectures, meetings, or any other spoken content sessions.
 
+![alt sample](media/ui1.png)
+
 ## Features
 
 - **Real-Time Transcription**: Automatically transcribe speech to text in real-time with continuous updates.
